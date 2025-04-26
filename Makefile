@@ -39,7 +39,7 @@ release: build
 	@echo "GitHub release created for version $(VERSION)."
 
 # Update README with the current version
-update-readme:
+readme:
 	python3 scripts/update_readme.py
 	echo "Updated README with version $(VERSION) and real URLs."
 
@@ -50,5 +50,5 @@ help:
 	@echo "  clean    - Remove build artifacts"
 	@echo "  install  - Install the package locally"
 	@echo "  release  - Create a GitHub release using gh CLI"
-	@echo "  update-readme - Update README with the current version"
+	@echo "  readme - Update README with the current version"
 	@echo "  help     - Show this help message"

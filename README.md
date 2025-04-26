@@ -30,15 +30,15 @@ The `Makefile` provides the following targets:
 
 To install the package from a release, follow these steps:
 
-1. Download the appropriate binary for your platform from the [GitHub release page](https://github.com/mr-szgz/fix_reactor_workflow/releases/tag/v1.0.2). The files are named as follows:
-   - [fix_reactor_workflow-1.0.2-macos-arm64.whl](https://github.com/mr-szgz/fix_reactor_workflow/releases/download/v1.0.2/fix_reactor_workflow-1.0.2-macos-arm64.whl) for macOS ARM64
-   - [fix_reactor_workflow-1.0.2-manylinux1_x86_64.whl](https://github.com/mr-szgz/fix_reactor_workflow/releases/download/v1.0.2/fix_reactor_workflow-1.0.2-manylinux1_x86_64.whl) for Linux
-   - [fix_reactor_workflow-1.0.2-win_amd64.whl](https://github.com/mr-szgz/fix_reactor_workflow/releases/download/v1.0.2/fix_reactor_workflow-1.0.2-win_amd64.whl) for Windows
+1. Download the appropriate binary for your platform from the [GitHub release page](https://github.com/mr-szgz/fix_reactor_workflow/releases/tag/v1.0.3). The files are named as follows:
+   - [fix_reactor_workflow-1.0.3-macos-arm64.whl](https://github.com/mr-szgz/fix_reactor_workflow/releases/download/v1.0.2/fix_reactor_workflow-1.0.3-macos-arm64.whl) for macOS ARM64
+   - [fix_reactor_workflow-1.0.3-manylinux1_x86_64.whl](https://github.com/mr-szgz/fix_reactor_workflow/releases/download/v1.0.2/fix_reactor_workflow-1.0.3-manylinux1_x86_64.whl) for Linux
+   - [fix_reactor_workflow-1.0.3-win_amd64.whl](https://github.com/mr-szgz/fix_reactor_workflow/releases/download/v1.0.2/fix_reactor_workflow-1.0.3-win_amd64.whl) for Windows
 
 2. Use `pip` to install the downloaded file. For example:
 
    ```bash
-   pip install https://github.com/mr-szgz/fix_reactor_workflow/releases/download/v1.0.2/fix_reactor_workflow-1.0.2-macos-arm64.whl
+   pip install https://github.com/mr-szgz/fix_reactor_workflow/releases/download/v1.0.3/fix_reactor_workflow-1.0.3-macos-arm64.whl
    ```
 
 ## Usage
