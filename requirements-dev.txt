@@ -1,0 +1,4 @@
+# Added dev dependencies for building and uploading packages
+setuptools
+wheel
+twine

@@ -21,3 +21,5 @@ setup(
     ],
     python_requires=">=3.6",
 )
+
+# Add a build script to automate the creation of binary builds for different platforms.
