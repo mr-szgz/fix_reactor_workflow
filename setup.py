@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="fix_reactor_workflow",
-    version="1.0.2",
+    version="1.0.3",
     packages=find_packages(include=["fix_reactor_workflow", "fix_reactor_workflow.*"]),
     entry_points={
         "console_scripts": [
