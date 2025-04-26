@@ -5,7 +5,7 @@ PACKAGE_NAME = fix_reactor_workflow
 VERSION = $(shell python3 setup.py --version)
 PLATFORMS = macos-arm64 manylinux1_x86_64 win_amd64
 
-.PHONY: all clean build install release help
+.PHONY: all clean build install release update-readme help
 
 # Default target
 all: build
@@ -38,6 +38,11 @@ release: build
 	gh release create v$(VERSION) dist/* --title "Release v$(VERSION)" --notes "Automated release for version $(VERSION)"
 	@echo "GitHub release created for version $(VERSION)."
 
+# Update README with the current version
+update-readme:
+	python3 scripts/update_readme.py
+	echo "Updated README with version $(VERSION) and real URLs."
+
 # Help command
 help:
 	@echo "Available targets:"
@@ -45,4 +50,5 @@ help:
 	@echo "  clean    - Remove build artifacts"
 	@echo "  install  - Install the package locally"
 	@echo "  release  - Create a GitHub release using gh CLI"
+	@echo "  update-readme - Update README with the current version"
 	@echo "  help     - Show this help message"
