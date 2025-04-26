@@ -31,6 +31,10 @@ install:
 
 # Create a GitHub release using gh CLI
 release: build
+	@if [ -z "$(shell ls -A dist)" ]; then \
+	  echo "Error: No files found in 'dist/' directory. Ensure the build step completed successfully."; \
+	  exit 1; \
+	fi
 	gh release create v$(VERSION) dist/* --title "Release v$(VERSION)" --notes "Automated release for version $(VERSION)"
 	@echo "GitHub release created for version $(VERSION)."
 
