@@ -11,9 +11,9 @@ setup(
     },
     install_requires=[],
     description="A tool to fix corrupted aux_id in JSON files.",
-    author="Your Name",
-    author_email="your.email@example.com",
-    url="https://github.com/yourusername/fix_reactor_workflow",
+    author="mr-szgz",
+    author_email="31197922+mr-szgz@users.noreply.github.com",
+    url="https://github.com/mr-szgz/fix_reactor_workflow",
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
