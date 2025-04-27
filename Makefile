@@ -13,8 +13,16 @@ all: build
 # Build the package for all target systems
 build: clean
 	@for platform in $(PLATFORMS); do \
-	  python3 setup.py bdist_wheel --plat-name=$$platform; \
-	  mv dist/*.whl dist/$(PACKAGE_NAME)-$(VERSION)-$$platform.whl; \
+	  if [ "$$platform" = "macos-arm64" ]; then \
+	    python3 setup.py bdist_wheel --plat-name=macosx_11_0_arm64; \
+	  else \
+	    python3 setup.py bdist_wheel --plat-name=$$platform; \
+	  fi; \
+	  for whl in dist/*.whl; do \
+	    new_name=`echo $$whl | sed -E 's/(.*)-(.*)-(.*)-(.*)-(.*)\.whl/\1-\2-none-any-\5\.whl/'`; \
+	    mv $$whl dist/$$new_name; \
+	    echo "Renamed $$whl to $$new_name"; \
+	  done; \
 	  echo "Built binary for $$platform"; \
 	done
 	@echo "Build complete. Check the 'dist/' directory for output."
